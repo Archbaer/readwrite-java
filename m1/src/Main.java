@@ -18,8 +18,9 @@ public class Main {
     public static void binaryFileWrite() {
         byte[] numbers = {10, 20, 30, 40, 50}; // Just some sample numbers
         try (FileOutputStream fileObj = new FileOutputStream("file2.dat")) {
-            for (int i=0; i< numbers.length; i++)
+            for (int i=0; i< numbers.length; i++) {
                 fileObj.write(numbers[i]);
+            }
             System.out.println("File written with FileOutputStream...");
             fileObj.close();
         } catch (IOException e) {
